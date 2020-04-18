@@ -69,9 +69,9 @@ let Body = ({
     setSkipped(newSkipped);
     if (activeStep === steps.length - 1) {
       if (editing) {
-        editPayment(name, (quantity = 0), (date = moment().format()), editing);
+        editPayment(name, quantity, date, editing);
       } else {
-        addPayment(name, (quantity = 0), (date = moment().format()));
+        addPayment(name, quantity, date);
       }
       history.push("dashboard");
     }
@@ -181,9 +181,9 @@ let mapStateToProps = (state) => ({
 });
 
 let mapDispatchToProps = (dispatch) => ({
-  addPayment: (name, quantity = 0, date = moment().format()) =>
+  addPayment: (name, quantity, date) =>
     dispatch(add_payment({ name, quantity, date })),
-  editPayment: (name, quantity = 0, date = moment().format(), index) =>
+  editPayment: (name, quantity, date, index) =>
     dispatch(edit_payment({ name, quantity, date, index })),
 });
 
