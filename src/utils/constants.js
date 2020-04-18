@@ -1,0 +1,9 @@
+export const SET_ACTUAL_ROUTE = "SET_ACTUAL_ROUTE";
+export const DELETE_ACTUAL_ROUTE = "DELETE_ACTUAL_ROUTE";
+export const ADD_PAYMENT = "ADD_PAYMENT";
+export const DELETE_PAYMENT = "DELETE_PAYMENT";
+export const EDIT_PAYMENT = "EDIT_PAYMENT";
+
+export const SET_FIELD = "SET_FIELD";
+export const DELETE_FIELD = "DELETE_FIELD";
+export const DELETE_ALL = "DELETE_ALL";
