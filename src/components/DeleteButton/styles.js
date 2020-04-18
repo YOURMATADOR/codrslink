@@ -3,7 +3,7 @@ import { secondary } from "../../utils/colors";
 
 export const useStyles = makeStyles((theme) => ({
   addButton: {
-    position: "absolute",
+    position: "fixed",
     bottom: theme.spacing(2),
     right: theme.spacing(25),
   },

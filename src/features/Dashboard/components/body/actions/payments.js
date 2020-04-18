@@ -19,16 +19,16 @@ export const _delete_actual_values = () => ({
 
 export const add_payment_action = ({ name, quantity, date }) => ({
   type: ADD_PAYMENT,
-  name,
-  quantity,
-  date,
+  name: name ? name : "",
+  quantity: quantity ? quantity : "0",
+  date: date ? date : moment().format(),
 });
 
 export const _edit_payment = ({ name, quantity, date, index }) => ({
   type: EDIT_PAYMENT,
-  name,
-  quantity,
-  date,
+  name: name ? name : "",
+  quantity: quantity ? quantity : "0",
+  date: date ? date : moment().format(),
   index,
 });
 export const _delete_payment = ({ index }) => ({
@@ -36,7 +36,7 @@ export const _delete_payment = ({ index }) => ({
   index,
 });
 
-export const add_payment = ({ name, quantity, date  }) => (
+export const add_payment = ({ name, quantity, date }) => (
   dispatch,
   getState
 ) => {
